@@ -1,24 +1,16 @@
 # 状态模式(State Pattern)
 
-### 应用场景
-代码中包含大量与对象状态相关的条件语句.
-
 ```plantuml
-state Idle
-state Run
-state Rise
-state Fall
-state Attack
+state Open
+state Close
+state Cancel
 
-[*] -> Idle
-Idle -up-> Attack : 触发
-Attack --> Idle : 结束
-Idle -> Run : abs(x方向输入值)>=0.1
-Run -> Idle : abs(x方向输入值)<0.1
-Idle --> Rise : 触发
-Rise --> Fall : y方向速度<-0.1
-Fall --> Idle : 接触地面
-Idle --> Fall : y方向速度<-0.1
+[*] --> Open : 创建订单
+Open -> Open : 更新数据
+Open -> Close : 关闭
+Close -> Open : 打开
+Open --> Cancel : 取消订单
+Close --> Cancel : 取消订单
 ```
 
 
