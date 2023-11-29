@@ -1,7 +1,7 @@
 ﻿namespace StatePattern.Simple
 {
-    public class State
+    public abstract class State
     {
-        
+        public abstract void Handle(Context context);
     }
 }

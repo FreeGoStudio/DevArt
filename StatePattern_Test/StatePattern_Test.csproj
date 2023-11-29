@@ -43,8 +43,14 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Tests.cs"/>
+        <Compile Include="ContextTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\StatePattern\StatePattern.csproj">
+        <Project>{792005b4-1289-45c4-85a1-f7b7dea32305}</Project>
+        <Name>StatePattern</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

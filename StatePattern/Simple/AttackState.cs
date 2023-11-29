@@ -1,7 +1,9 @@
 ﻿namespace StatePattern.Simple
 {
-    public class AttackState
+    public class AttackState : State
     {
-        
+        public override void Handle(Context context)
+        {
+        }
     }
 }

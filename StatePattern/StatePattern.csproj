@@ -5,7 +5,7 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{BB2276FD-B89A-41DD-96BF-B037839A7254}</ProjectGuid>
+        <ProjectGuid>{792005B4-1289-45C4-85A1-F7B7DEA32305}</ProjectGuid>
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>StatePattern</RootNamespace>
@@ -40,13 +40,12 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Original\StateMachine.cs" />
+        <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="Simple\AttackState.cs" />
         <Compile Include="Simple\Context.cs" />
-        <Compile Include="Simple\FallState.cs" />
         <Compile Include="Simple\IdleState.cs" />
-        <Compile Include="Simple\RiseState.cs" />
-        <Compile Include="Simple\RunState.cs" />
         <Compile Include="Simple\State.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
