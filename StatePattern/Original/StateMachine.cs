@@ -2,15 +2,23 @@
 
 namespace StatePattern.Original
 {
+    /// <summary>
+    /// 使用普通方法创建的状态机
+    /// </summary>
     public class StateMachine
     {
-        private const int Idle = 0;
-        private const int Run = 1;
-        private const int Attack = 2;
-        private const int Rise = 3;
-        private const int Fall = 4;
+        public const int Idle = 0;
+        public const int Run = 1;
+        public const int Attack = 2;
+        public const int Rise = 3;
+        public const int Fall = 4;
 
-        private int State = Idle;
+        public int State = Idle;
+
+        public StateMachine()
+        {
+            
+        }
 
         /// <summary>
         /// 动作：输入攻击指令

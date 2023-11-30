@@ -2,19 +2,18 @@
 
 namespace StatePattern.Simple
 {
-    public class IdleState : IState
+    public class RiseState : IState
     {
-        private readonly StateMachine context;
+        private StateMachine context;
 
-        public IdleState(StateMachine context)
+        public RiseState(StateMachine context)
         {
             this.context = context;
         }
 
         public void InputAttackCommand()
         {
-            Console.WriteLine("播放Attack动画");
-            this.context.SetState(context.AttackState);
+            Console.WriteLine("不能在跳跃中攻击");
         }
 
         public void AttackActionComplete()
@@ -24,8 +23,7 @@ namespace StatePattern.Simple
 
         public void InputXThanThresholdValue()
         {
-            Console.WriteLine("播放Run动画");
-            this.context.SetState(this.context.RunState);
+            Console.WriteLine("不能在跳跃时移动");
         }
 
         public void InputXLessThresholdValue()
@@ -35,8 +33,7 @@ namespace StatePattern.Simple
 
         public void InputJumpCommand()
         {
-            Console.WriteLine("播放跳跃动画");
-            this.context.SetState(this.context.RiseState);
+            Console.WriteLine("不能在跳跃中跳跃");
         }
 
         public void YVelocityLessThresholdValue()

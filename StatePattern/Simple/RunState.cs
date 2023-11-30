@@ -2,19 +2,18 @@
 
 namespace StatePattern.Simple
 {
-    public class IdleState : IState
+    public class RunState:IState
     {
-        private readonly StateMachine context;
-
-        public IdleState(StateMachine context)
+        private StateMachine context;
+        
+        public RunState(StateMachine context)
         {
             this.context = context;
         }
-
+        
         public void InputAttackCommand()
         {
-            Console.WriteLine("播放Attack动画");
-            this.context.SetState(context.AttackState);
+            Console.WriteLine("不能在奔跑时攻击");
         }
 
         public void AttackActionComplete()
@@ -24,25 +23,23 @@ namespace StatePattern.Simple
 
         public void InputXThanThresholdValue()
         {
-            Console.WriteLine("播放Run动画");
-            this.context.SetState(this.context.RunState);
+            Console.WriteLine("继续播放Run动画");
         }
 
         public void InputXLessThresholdValue()
         {
-            Console.WriteLine("当前不在奔跑中");
+            Console.WriteLine("播放Idle动画");
+            this.context.SetState(this.context.IdleState);
         }
 
         public void InputJumpCommand()
         {
-            Console.WriteLine("播放跳跃动画");
-            this.context.SetState(this.context.RiseState);
+            Console.WriteLine("不能在奔跑中跳跃");
         }
 
         public void YVelocityLessThresholdValue()
         {
-            Console.WriteLine("播放下落动画");
-            this.context.SetState(this.context.FallState);
+            Console.WriteLine("不能在奔跑中下落");
         }
 
         public void CharacterTouchPlane()
