@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "StatePattern\StatePattern.csproj", "{792005B4-1289-45C4-85A1-F7B7DEA32305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern_Test", "StatePattern_Test\StatePattern_Test.csproj", "{3B55E063-7236-4775-B0FA-640C16732BFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{792005B4-1289-45C4-85A1-F7B7DEA32305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792005B4-1289-45C4-85A1-F7B7DEA32305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792005B4-1289-45C4-85A1-F7B7DEA32305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792005B4-1289-45C4-85A1-F7B7DEA32305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B55E063-7236-4775-B0FA-640C16732BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B55E063-7236-4775-B0FA-640C16732BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B55E063-7236-4775-B0FA-640C16732BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B55E063-7236-4775-B0FA-640C16732BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
